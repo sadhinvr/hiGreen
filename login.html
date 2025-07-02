@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .inActiveTab {
+            background-image: url('assets/login/bg_repeat2.png');
+            border-bottom: 1px solid #000;
+            cursor: pointer;
+        }
+
+        /* .errored .error{
+            display: flex !important;
+        } */
+        input.errored {
+            border-color: #D40F0F !important;
+            color: #D40F0F;
+        }
+
+        input.errored::placeholder {
+            color: #D40F0F;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- login section start -->
+    <section class="lg:mt-[66px] mt-4.5 mb-[72px] px-4">
+        <div class="flex max-w-[1226px] mx-auto gap-4">
+            <img class="border-[0.5px] xl:inline hidden" src="assets/login/key.png" alt="">
+
+            <div class="max-w-[840px] mx-auto border w-full">
+                <div class="grid-cols-2 grid justify-items-center">
+                    <div
+                        class=" helvetica-font text-[15px] leading-normal py-1.5 flex justify-center w-full bg-[length:auto_38px]">
+                        Anmelden
+                    </div>
+                    <div
+                        class="inActiveTab helvetica-font text-[15px] leading-normal py-1.5 flex justify-center w-full bg-[length:auto_38px] border-l">
+                        Registrieren
+                    </div>
+                </div>
+
+                <form class="px-4" novalidate>
+                    <div class="pt-11 pb-7.5 max-w-[560px] w-full mx-auto flex flex-col gap-6">
+
+                        <h1 class="ml-2.5 antonio-font text-[30px] font-bold leading-[130%] uppercase">Melden Sie sich
+                            an
+                        </h1>
+
+                        <!-- input  -->
+                        <input
+                            class=" border focus:border focus:outline-none px-4 py-[11px] text-[15px] leading-[130%] placeholder:text-[15px] placeholder:text-black w-full"
+                            placeholder="E-Mail" type="email">
+
+                        <input
+                            class=" border focus:border focus:outline-none px-4 py-[11px] text-[15px] leading-[130%] placeholder:text-[15px] placeholder:text-black w-full"
+                            placeholder="Passwort" type="password">
+
+                        <!-- error  -->
+                        <div class="error gap-2 sm:hidden hidden">
+                            <img class="error_icon " src="assets/login/error.svg" alt="">
+                            <p class="error_text text-[13px] inline text-[#D40F0F]">
+                                Bitte geben Sie Ihr Passwort ein!
+                            </p>
+                        </div>
+
+                        <button
+                            class="w-full text-[15px] leading-normal uppercase tracking-[1.05px] anton-font text-center px-8 py-2 bg-black text-white cursor-pointer md:max-w-[315px]">Anmelden</button>
+
+                        <a class="helvetica-font text-[15px] leading-normal underline underline-offset-3 text-black/80 text-center sm:text-left"
+                            href="">Passwort vergessen
+                        </a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!-- login section end -->
+
+
+    <script>
+        $(function () {
+            $("form").on("submit", function (e) {
+                e.preventDefault(); // stop form submission
+
+                const emailInput = $('input[type="email"]');
+                const passInput = $('input[type="password"]');
+                const errorBox = $(".error");
+
+                let isValid = true;
+
+                // Reset previous states
+                $("input").removeClass("errored");
+                errorBox.removeClass("flex").addClass("hidden");
+
+                const emailVal = emailInput.val().trim();
+                const passVal = passInput.val().trim();
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailVal || !emailRegex.test(emailVal)) {
+                    emailInput.addClass("errored");
+                    isValid = false;
+                }
+
+                if (!passVal) {
+                    passInput.addClass("errored");
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    errorBox.removeClass("hidden").addClass("flex");
+                    return;
+                }
+
+                // Form is valid — submit or proceed here
+                console.log("Form valid — submit logic here.");
+                // this.submit();
+            });
+
+            // Clear errors on input focus
+            $("input").on("focus", function () {
+                $(this).removeClass("errored");
+                $(".error").removeClass("flex").addClass("hidden");
+            });
+        });
+    </script>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

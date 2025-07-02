@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* Regular */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-RegIta.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Thin */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-ThinItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Extra Light */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Light */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Extra Bold */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Extra Bold Italic */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-ExtBdIta.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Black */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Black Italic */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Extra Light Italic (guessing as ExtLtIta) */
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('../fonts/HelveticaNowText-ExtLtIta.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+
+
+.antonio-font {
+  font-family: "Antonio", sans-serif;
+}
+
+.anton-font {
+  font-family: "Anton", sans-serif;
+}
+
+.helvetica-font{
+  font-family: 'Helvetica Now Text', sans-serif;
+}
+
+
+
+
